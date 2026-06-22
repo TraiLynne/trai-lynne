@@ -1,13 +1,12 @@
 import Image from "next/image";
 import Hero from "../components/cover/Hero";
+import OwnershipBlock from "../components/cover/OwnershipBlock";
 
 export default function Home() {
   return (
     <div>
       <Hero />
-      <div>
-        <p>Ownership Block</p>
-      </div>
+      <OwnershipBlock />
       <div>
         <p>enter button || construction tape</p>
       </div>

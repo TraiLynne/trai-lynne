@@ -17,13 +17,12 @@ const containerStyle:CSSProperties = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '50vh',
+    height: '40vh',
     textAlign: 'center',
 };
 
 const logoWrapperStyle: CSSProperties = {
     position: "relative",
-    width: "98vw",
-    maxWidth: "400px",
+    width: "min(98vw, 40vh)",
     aspectRatio: "1 / 1",
 };
