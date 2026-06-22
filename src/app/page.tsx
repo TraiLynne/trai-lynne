@@ -2,6 +2,7 @@ import Image from "next/image";
 import Hero from "../components/cover/Hero";
 import OwnershipBlock from "../components/cover/OwnershipBlock";
 import ConstructionArea from "../components/cover/ConstructionArea";
+import Barcode from "../components/cover/Barcode";
 
 export default function Home() {
   return (
@@ -9,9 +10,7 @@ export default function Home() {
       <Hero />
       <OwnershipBlock />
       <ConstructionArea />
-      <footer>
-        <p>Barcode</p>
-      </footer>
+      <Barcode />
     </div>
   );
 }
