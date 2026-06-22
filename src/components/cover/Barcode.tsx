@@ -3,7 +3,7 @@ import { CSSProperties } from 'react';
 export default function Barcode() {
   return (
     <footer style={containerStyle}>
-      <div>
+      <div style={wrapperStyle}>
         <p>Copyright © {new Date().getFullYear()}</p>
         <p>Trai Lynne</p>
         <p>All rights reserved.</p>
@@ -17,6 +17,16 @@ const containerStyle: CSSProperties = {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  height: '10vh',
+  height: '20vh',
   textAlign: 'center',
 };
+
+const wrapperStyle: CSSProperties = {
+  position: "relative",
+  maxWidth: "30vh",
+  backgroundColor: "rgba(255, 255, 255, 0.8)",
+  borderRadius: "0.5rem",
+  borderStyle: "solid",
+  borderWidth: "thick",
+  padding: "1rem",
+}

@@ -18,7 +18,7 @@ const containerStyle:CSSProperties = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '40vh',
+    height: '30vh',
     textAlign: 'center',
 };
 
@@ -31,6 +31,7 @@ const wrapperStyle: CSSProperties = {
     alignItems: "center",
     justifyContent: "center",
     borderStyle: "double",
-    borderWidth: "thick",
+    borderWidth: "1rem",
     borderRadius: "1rem",
+    backgroundColor: "rgba(255, 255, 255, 0.8)",
 };
