@@ -26,3 +26,12 @@ body {
   background-image: url("../../public/textures/cover.jpg");
   background-size: 50%;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

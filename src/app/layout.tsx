@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Trai lynne",
+  title: "Trai Lynne",
 };
 
 export default function RootLayout({

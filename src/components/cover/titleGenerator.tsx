@@ -1,6 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Fira_Code } from "next/font/google";
+
+const firaCode = Fira_Code({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 const titles = [
   "Software Engineer",
@@ -67,7 +73,7 @@ export default function TitleGenerator() {
   }, [displayText, isDeleting, titleIndex]);
 
   return (
-    <h2>
+    <h2 className={firaCode.className}>
       {displayText || "\u00A0"}
     </h2>
   );
