@@ -23,17 +23,15 @@ export default function Barcode() {
 }
 
 const containerStyle: CSSProperties = {
+  width: "100%",
   display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
   justifyContent: "center",
-  height: "20vh",
-  textAlign: "center",
+  flex: "0 1 auto",
 };
 
 const wrapperStyle: CSSProperties = {
   position: "relative",
-  maxWidth: "30vh",
+  maxWidth: "min(50vw, 420px)",
   backgroundColor: "rgba(255, 255, 255, 0.8)",
   borderRadius: "0.5rem",
   borderStyle: "solid",
@@ -41,6 +39,7 @@ const wrapperStyle: CSSProperties = {
   padding: "1rem",
   fontSize: "0.8rem",
   fontWeight: "bold",
+  flexShrink: 1
 };
 
 const barcodeStyle: CSSProperties = {

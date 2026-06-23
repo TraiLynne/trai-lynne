@@ -35,3 +35,10 @@ body {
     transform: translateX(-50%);
   }
 }
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .cover-fix {
+    justify-content: space-between !important;
+    padding: 0.5rem !important;
+  }
+}

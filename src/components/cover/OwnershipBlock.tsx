@@ -21,31 +21,34 @@ export default function OwnershipBlock() {
     )
 }
 
-const containerStyle:CSSProperties = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '30vh',
-    textAlign: 'center',
+const containerStyle: CSSProperties = {
+  display: "flex",
+  justifyContent: "center",
+  width: "100%",
 };
 
 const wrapperStyle: CSSProperties = {
-    position: "relative",
-    width: "40vh",
-    aspectRatio: "5 / 3",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "space-around",
-    borderStyle: "double",
-    borderWidth: "1rem",
-    borderRadius: "1rem",
-    backgroundColor: "rgba(255, 255, 255, 0.8)",
+  width: "min(90vw, 380px)",
+  aspectRatio: "2 / 1",
+
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  gap: "0.5rem",
+
+  borderStyle: "double",
+  borderWidth: "0.5rem",
+  borderRadius: "1rem",
+
+  backgroundColor: "rgba(255, 255, 255, 0.8)",
+
+  overflow: "hidden",
+
+  textAlign: "center",
 };
 
 const nameStyle: CSSProperties = {
-    fontSize: "1.5rem",
+    fontSize: "clamp(1.2rem, 2vw, 1.6rem)",
     fontWeight: "bold",
     margin: 0,
 };  

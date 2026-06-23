@@ -12,17 +12,17 @@ export default function Hero() {
     )
 }
 
-const containerStyle:CSSProperties = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '40vh',
-    textAlign: 'center',
+const containerStyle: CSSProperties = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  width: "100%",
+  flex: "0 1 auto",
 };
 
 const logoWrapperStyle: CSSProperties = {
     position: "relative",
     width: "min(98vw, 40vh)",
     aspectRatio: "1 / 1",
+    flexShrink: 1
 };
