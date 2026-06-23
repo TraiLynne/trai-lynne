@@ -32,7 +32,7 @@ const containerStyle: CSSProperties = {
 const wrapperStyle: CSSProperties = {
   position: "relative",
   maxWidth: "min(50vw, 420px)",
-  backgroundColor: "rgba(255, 255, 255, 0.8)",
+  backgroundColor: "var(--surface)",
   borderRadius: "0.5rem",
   borderStyle: "solid",
   borderWidth: "thick",
