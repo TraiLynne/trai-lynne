@@ -39,7 +39,8 @@ const wrapperStyle: CSSProperties = {
   padding: "1rem",
   fontSize: "0.8rem",
   fontWeight: "bold",
-  flexShrink: 1
+  flexShrink: 1,
+  textAlign: "center",
 };
 
 const barcodeStyle: CSSProperties = {
