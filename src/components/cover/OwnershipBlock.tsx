@@ -40,10 +40,9 @@ const wrapperStyle: CSSProperties = {
   borderWidth: "0.5rem",
   borderRadius: "1rem",
 
-  backgroundColor: "rgba(255, 255, 255, 0.8)",
+  backgroundColor: "var(--surface)",
 
   overflow: "hidden",
-
   textAlign: "center",
 };
 
