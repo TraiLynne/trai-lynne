@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html, body {
+  height: 100dvh;
+}
+
 :root {
   --background: #ffffff;
   --surface: rgba(255, 255, 255, 0.8);

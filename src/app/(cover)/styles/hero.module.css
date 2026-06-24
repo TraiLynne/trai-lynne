@@ -9,7 +9,7 @@
 .wrapper {
     /* layout */
     position: relative;
-    width: min(98vw, 40vh);
+    width: min(98vw, 40dvh);
     aspect-ratio: 1 / 1;
 }
 

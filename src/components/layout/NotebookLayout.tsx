@@ -1,6 +1,6 @@
 import Barcode from "../barcode/Barcode"
 import ConstructionArea from "../construction/ConstructionArea";
-import styles from "../../styles/notebook.module.css"
+import styles from "@/src/styles/notebook.module.css"
 import Header from "../header/header";
 
 export default function NotebookLayout({
@@ -9,10 +9,10 @@ export default function NotebookLayout({
     children: React.ReactNode
 }) {
     return (
-        <main className={styles.mainStyle}>
+        <main className={styles.main}>
             <Header />
 
-            <div className={styles.pageStyle}>
+            <div className={styles.page}>
                 <ConstructionArea />
                 {children}
             </div>
