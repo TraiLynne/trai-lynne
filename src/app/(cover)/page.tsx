@@ -2,7 +2,7 @@
 
 import Hero from "./components/Hero";
 import OwnershipBlock from "./components/OwnershipBlock";
-import ConstructionArea from "./components/ConstructionArea";
+import ConstructionArea from "../../components/construction/ConstructionArea";
 import Barcode from "../../components/barcode/Barcode";
 import CTA from "./components/CTA";
 

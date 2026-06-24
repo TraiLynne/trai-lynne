@@ -2,7 +2,7 @@ import Image from "next/image";
 import Barcode from "../barcode/Barcode"
 import Logo from "../../../public/images/logo.png";
 import { CSSProperties } from "react";
-import ConstructionArea from "../../app/(cover)/components/ConstructionArea";
+import ConstructionArea from "../construction/ConstructionArea";
 import Link from "next/link";
 
 export default function NotebookLayout({

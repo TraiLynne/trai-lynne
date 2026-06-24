@@ -1,0 +1,26 @@
+.constructionArea {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.constructionTape {
+    position: relative;
+    width: 100%;
+    background-image: repeating-linear-gradient(-30deg, #facc15 0px, #facc15 20px, #000 20px, #000 40px);
+    padding: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+
+.text {
+    background-color: #000;
+    color: #FFF;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    text-align: center;
+}
