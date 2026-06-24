@@ -1,18 +1,25 @@
-import { Rock_Salt, Libre_Barcode_39_Text } from "next/font/google";
+import { Rock_Salt, Libre_Barcode_39_Text, Fira_Code } from "next/font/google";
 
-export const writtenFont = Rock_Salt({
-  subsets: ["latin"],
-  weight: "400",
+const barcodeFont = Libre_Barcode_39_Text({
+    subsets: ["latin"],
+    weight: "400",
 });
 
-export const barcodeFont = Libre_Barcode_39_Text({
-  subsets: ["latin"],
-  weight: "400",
+const codeFont = Fira_Code({
+    subsets: ["latin"],
+    weight: ["300", "400", "500", "600", "700"],
 });
+
+const writtenFont = Rock_Salt({
+    subsets: ["latin"],
+    weight: "400",
+});
+
 
 const fonts = {
-  writtenFont,
-  barcodeFont,
+    barcodeFont,
+    codeFont,
+    writtenFont
 };
 
 export default fonts;
