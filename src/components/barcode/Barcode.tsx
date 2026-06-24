@@ -3,7 +3,7 @@ import {barcodeFont} from "@/src/app/fonts";
 
 export default function Barcode() {
   return (
-    <footer className={styles.footerStyle}>
+    <footer className={styles.footer}>
       <div className={styles.barcodeWrapper}>
         <p>Copyright © {new Date().getFullYear()}</p>
 
