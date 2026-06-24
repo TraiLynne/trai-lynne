@@ -1,21 +1,36 @@
-.enterButton {
+.container {
+  /* layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  /* layout */
   display: inline-block;
   padding: 0.5rem 1rem;
+
+  /* shape */
   border-radius: 6px;
 
+  /* surface */
   background: var(--surface);
   color: var(--foreground);
   border: 1px solid var(--foreground);
 
+  /* depth */
   box-shadow: 0 0 18px rgba(250, 204, 21, 0.75);
 
+  /* motion */
   transition: box-shadow 200ms ease, transform 200ms ease;
 }
 
-.enterButton:hover {
+.button:hover {
+  /* depth */
   box-shadow: 0 0 26px rgba(250, 204, 21, 0.9);
 }
 
-.enterButton:active {
+.button:active {
+  /* motion */
   transform: scale(0.98);
 }

@@ -1,0 +1,19 @@
+.container {
+    /* layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.wrapper {
+    /* layout */
+    position: relative;
+    width: min(98vw, 40dvh);
+    aspect-ratio: 1 / 1;
+}
+
+.img {
+    /* visual */
+    object-fit: contain;
+}

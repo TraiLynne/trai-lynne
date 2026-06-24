@@ -1,69 +1,24 @@
-import Image from "next/image";
-import Barcode from "../cover/Barcode"
-import Logo from "../../../public/images/logo.png";
-import { CSSProperties } from "react";
-import ConstructionArea from "../cover/ConstructionArea";
-import Link from "next/link";
+import Barcode from "../barcode/Barcode"
+import ConstructionArea from "../construction/ConstructionArea";
+import styles from "@/src/styles/notebook.module.css"
+import Header from "../header/header";
 
 export default function NotebookLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode
+    children: React.ReactNode
 }) {
-  return (
-    <main style={mainStyle}>
-        <header style={headerStyle}>
-            <Link href={"/"} style={homeStyle}>
-                <Image src={Logo} alt={"Trai Lynne Logo"} style={imgStye}/>
-            </Link>
-        </header>
+    return (
+        <main className={styles.main}>
+            <Header />
 
-        <div style={pageStyle}>
-            <ConstructionArea/>
-            {children}
-        </div>
+            <div className={styles.page}>
+                <ConstructionArea />
+                {children}
+            </div>
 
-        <Barcode/>
-        
-    </main>
-  )
+            <Barcode />
+
+        </main>
+    )
 }
-
-const mainStyle: CSSProperties = {
-    width: "90vw",
-    maxWidth: "1200px",
-    minHeight: "100vh",
-    margin: "0 auto",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between"
-}
-
-const homeStyle = {
-    height: "100%",
-    display: "flex",
-    alignItems: "center"
-}
-
-const headerStyle: CSSProperties = {
-    height: "10vh",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: ".5rem"
-}
-
-const imgStye: CSSProperties = {
-    aspectRatio: "1 / 1",
-    objectFit: "contain",
-    height: "90%"
-}
-
-
-const pageStyle: CSSProperties = {
-    flexGrow: 1,
-    overflowY: "auto",
-    padding: "2rem",
-    backgroundImage: "var(--paper)",
-    backgroundSize: "300px",
-};

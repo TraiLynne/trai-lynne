@@ -1,0 +1,21 @@
+.header {
+  min-height: 64px;
+  height: 10dvh;
+  max-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  height: 90%;
+}
