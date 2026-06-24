@@ -19,3 +19,9 @@
 .enterButton:active {
   transform: scale(0.98);
 }
+
+.containerStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
