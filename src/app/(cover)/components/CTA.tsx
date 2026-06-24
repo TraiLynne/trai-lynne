@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { CSSProperties } from "react";
-import styles from '../../styles/cta.module.css'
+import styles from '../styles/cta.module.css'
 
 export default function CTA() {
   return (

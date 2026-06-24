@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Barcode from "../cover/Barcode"
+import Barcode from "../../app/(cover)/components/Barcode"
 import Logo from "../../../public/images/logo.png";
 import { CSSProperties } from "react";
-import ConstructionArea from "../cover/ConstructionArea";
+import ConstructionArea from "../../app/(cover)/components/ConstructionArea";
 import Link from "next/link";
 
 export default function NotebookLayout({
