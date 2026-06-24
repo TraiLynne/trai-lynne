@@ -1,0 +1,12 @@
+.heroContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.logoWrapper {
+    position: relative;
+    width: min(98vw, 40vh);
+    aspect-ratio: 1/1;
+}
