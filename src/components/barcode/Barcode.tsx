@@ -1,5 +1,5 @@
 import styles from "./barcode.module.css"
-import fonts from "@/src/app/fonts";
+import {barcodeFont} from "@/src/app/fonts";
 
 export default function Barcode() {
   return (
@@ -7,7 +7,7 @@ export default function Barcode() {
       <div className={styles.barcodeWrapper}>
         <p>Copyright © {new Date().getFullYear()}</p>
 
-        <p className={`${fonts.barcodeFont.className} ${styles.barcodeFont}`}>
+        <p className={`${barcodeFont.className} ${styles.barcodeFont}`}>
           TRAI LYNNE
         </p>
 

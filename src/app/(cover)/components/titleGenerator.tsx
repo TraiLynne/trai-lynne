@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import fonts from "../../fonts";
+import {codeFont} from "../../fonts";
 
 const titles = [
   "Software Engineer",
@@ -69,7 +69,7 @@ export default function TitleGenerator() {
   }, [displayText, isDeleting, titleIndex]);
 
   return (
-    <h2 className={fonts.codeFont.className}>
+    <h2 className={codeFont.className}>
       {displayText || "\u00A0"}
     </h2>
   );

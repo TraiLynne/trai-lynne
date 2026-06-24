@@ -16,10 +16,9 @@ const writtenFont = Rock_Salt({
 });
 
 
-const fonts = {
+export {
     barcodeFont,
     codeFont,
     writtenFont
 };
 
-export default fonts;
