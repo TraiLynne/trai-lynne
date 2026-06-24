@@ -1,0 +1,26 @@
+.footerStyle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex: 0 1 auto;
+    padding: 1rem;
+    height: auto;
+}
+
+.barcodeWrapper {
+    position: relative;
+    max-width: 420px;
+    background-color: var(--surface);
+    border-radius: 0.5rem;
+    border-style: solid;
+    border-width: 0.15rem;
+    padding: 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    flex-shrink: 1;
+    text-align: center;
+}
+
+.barcodeFont {
+    font-size: 1.6rem;
+}

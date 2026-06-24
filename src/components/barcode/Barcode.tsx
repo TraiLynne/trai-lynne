@@ -1,5 +1,5 @@
-import { CSSProperties } from "react";
 import { Libre_Barcode_39_Text } from "next/font/google";
+import styles from "./barcode.module.css"
 
 const barcodeFont = Libre_Barcode_39_Text({
   subsets: ["latin"],
@@ -8,11 +8,11 @@ const barcodeFont = Libre_Barcode_39_Text({
 
 export default function Barcode() {
   return (
-    <footer style={containerStyle}>
-      <div style={wrapperStyle}>
+    <footer className={styles.footerStyle}>
+      <div className={styles.barcodeWrapper}>
         <p>Copyright © {new Date().getFullYear()}</p>
 
-        <p className={barcodeFont.className} style={barcodeStyle}>
+        <p className={`${barcodeFont.className} ${styles.barcodeFont}`}>
           TRAI LYNNE
         </p>
 
@@ -21,31 +21,3 @@ export default function Barcode() {
     </footer>
   );
 }
-
-const containerStyle: CSSProperties = {
-  width: "100%",
-  display: "flex",
-  justifyContent: "center",
-  flex: "0 1 auto",
-  padding: "1rem",
-  height: "auto",
-};
-
-const wrapperStyle: CSSProperties = {
-  position: "relative",
-  maxWidth: "420px",
-  backgroundColor: "var(--surface)",
-  borderRadius: "0.5rem",
-  borderStyle: "solid",
-  borderWidth: "0.15rem",
-  padding: "1rem",
-  fontSize: "0.8rem",
-  fontWeight: "bold",
-  flexShrink: 1,
-  textAlign: "center",
-};
-
-const barcodeStyle: CSSProperties = {
-  fontSize: "1.6rem",
-  fontWeight: "normal",
-};
