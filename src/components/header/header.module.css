@@ -1,18 +1,20 @@
-.headerStyle {
+.header {
+  min-height: 64px;
   height: 10vh;
+  max-height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem
+  padding: 0.5rem;
 }
 
-.linkStyle {
+.link {
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.imgStyle {
+.img {
   aspect-ratio: 1/1;
   object-fit: contain;
   height: 90%;
