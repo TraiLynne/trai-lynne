@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Barcode from "../../app/(cover)/components/Barcode"
+import Barcode from "../barcode/Barcode"
 import Logo from "../../../public/images/logo.png";
 import { CSSProperties } from "react";
 import ConstructionArea from "../../app/(cover)/components/ConstructionArea";
