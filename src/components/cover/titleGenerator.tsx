@@ -14,6 +14,7 @@ const titles = [
   "Full Stack Web Developer",
   "Lifelong Learner",
   "Geek",
+  "Bestie"
 ];
 
 export default function TitleGenerator() {

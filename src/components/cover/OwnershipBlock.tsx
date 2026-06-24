@@ -25,6 +25,7 @@ const containerStyle: CSSProperties = {
   display: "flex",
   justifyContent: "center",
   width: "100%",
+//   padding: "1rem"
 };
 
 const wrapperStyle: CSSProperties = {
@@ -37,13 +38,14 @@ const wrapperStyle: CSSProperties = {
   gap: "0.5rem",
 
   borderStyle: "double",
-  borderWidth: "0.5rem",
+  borderWidth: "0.4rem",
   borderRadius: "1rem",
 
   backgroundColor: "var(--surface)",
 
   overflow: "hidden",
   textAlign: "center",
+  padding: "1rem",
 };
 
 const nameStyle: CSSProperties = {
