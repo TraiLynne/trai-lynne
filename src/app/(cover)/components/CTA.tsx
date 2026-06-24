@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../styles/cta.module.css";
+import styles from "@/src/app/(cover)/styles/cta.module.css";
 
 export default function CTA() {
   return (
