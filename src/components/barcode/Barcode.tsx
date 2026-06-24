@@ -1,10 +1,5 @@
-import { Libre_Barcode_39_Text } from "next/font/google";
 import styles from "./barcode.module.css"
-
-const barcodeFont = Libre_Barcode_39_Text({
-  subsets: ["latin"],
-  weight: "400",
-});
+import fonts from "@/src/app/fonts";
 
 export default function Barcode() {
   return (
@@ -12,7 +7,7 @@ export default function Barcode() {
       <div className={styles.barcodeWrapper}>
         <p>Copyright © {new Date().getFullYear()}</p>
 
-        <p className={`${barcodeFont.className} ${styles.barcodeFont}`}>
+        <p className={`${fonts.barcodeFont.className} ${styles.barcodeFont}`}>
           TRAI LYNNE
         </p>
 
