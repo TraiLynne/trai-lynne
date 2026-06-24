@@ -1,10 +1,10 @@
 import Link from "next/link";
-import styles from '../styles/cta.module.css'
+import styles from "../styles/cta.module.css";
 
 export default function CTA() {
   return (
-    <div className={styles.containerStyle}>
-      <Link href={"/about"} className={styles.enterButton}>
+    <div className={styles.container}>
+      <Link href="/about" className={styles.button}>
         Open
       </Link>
     </div>
