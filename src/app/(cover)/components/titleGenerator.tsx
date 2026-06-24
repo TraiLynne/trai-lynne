@@ -1,16 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import {codeFont} from "../../fonts";
+import { codeFont } from "@/src/app/fonts";
+import titles from "@/src/app/(cover)/data/titles";
+import styles from "@/src/app/(cover)/styles/titleGen.module.css"
 
-const titles = [
-  "Software Engineer",
-  "Site Reliability Engineer",
-  "Full Stack Web Developer",
-  "Lifelong Learner",
-  "Geek",
-  "Bestie"
-];
+const TYPE_SPEED = 100;
+const DELETE_SPEED = 50;
+const HOLD_TIME = 1500;
+const SWITCH_DELAY = 300;
 
 export default function TitleGenerator() {
   const [titleIndex, setTitleIndex] = useState(0);
@@ -29,12 +27,12 @@ export default function TitleGenerator() {
           setDisplayText(
             currentTitle.slice(0, displayText.length + 1)
           );
-        }, 100);
+        }, TYPE_SPEED);
       } else {
-        // pause when fully typed
+
         timeout = setTimeout(() => {
           setIsDeleting(true);
-        }, 1500);
+        }, HOLD_TIME);
       }
     }
 
@@ -45,13 +43,13 @@ export default function TitleGenerator() {
           setDisplayText(
             currentTitle.slice(0, displayText.length - 1)
           );
-        }, 50);
+        }, DELETE_SPEED);
       } else {
-        // pause before switching title
+
         timeout = setTimeout(() => {
           setIsDeleting(false);
 
-          // pick next random index (no immediate repeat)
+
           setTitleIndex((prev) => {
             let next = prev;
 
@@ -61,7 +59,7 @@ export default function TitleGenerator() {
 
             return next;
           });
-        }, 300);
+        }, SWITCH_DELAY);
       }
     }
 
@@ -69,7 +67,7 @@ export default function TitleGenerator() {
   }, [displayText, isDeleting, titleIndex]);
 
   return (
-    <h2 className={codeFont.className}>
+    <h2 className={`${codeFont.className} ${styles.title}`}>
       {displayText || "\u00A0"}
     </h2>
   );
