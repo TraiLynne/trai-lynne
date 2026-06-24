@@ -1,26 +1,46 @@
 .constructionArea {
+    /* layout */
     width: 100%;
+
+    /* structure */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .constructionTape {
-    position: relative;
+    /* layout */
     width: 100%;
-    background-image: repeating-linear-gradient(-30deg, #facc15 0px, #facc15 20px, #000 20px, #000 40px);
     padding: 1rem;
+
+    /* structure */
+    position: relative;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+
+    /* surface */
+    background-image:
+        repeating-linear-gradient(-30deg,
+            #facc15 0px,
+            #facc15 20px,
+            #000 20px,
+            #000 40px);
+
+    /* effects */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
-.text {
-    background-color: #000;
-    color: #FFF;
+.tapeText {
+    /* layout */
     padding: 0.5rem 1rem;
+
+    /* typography */
+    font-size: 0.8rem;
     font-weight: bold;
     letter-spacing: 0.08rem;
-    text-transform: uppercase;
-    font-size: 0.8rem;
     text-align: center;
+    text-transform: uppercase;
+
+    /* surface */
+    background-color: var(--background);
+    color: var(--foreground);
 }
