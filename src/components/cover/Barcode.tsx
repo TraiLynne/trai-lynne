@@ -27,15 +27,17 @@ const containerStyle: CSSProperties = {
   display: "flex",
   justifyContent: "center",
   flex: "0 1 auto",
+  padding: "1rem",
+  height: "auto",
 };
 
 const wrapperStyle: CSSProperties = {
   position: "relative",
-  maxWidth: "min(50vw, 420px)",
+  maxWidth: "420px",
   backgroundColor: "var(--surface)",
   borderRadius: "0.5rem",
   borderStyle: "solid",
-  borderWidth: "thick",
+  borderWidth: "0.15rem",
   padding: "1rem",
   fontSize: "0.8rem",
   fontWeight: "bold",

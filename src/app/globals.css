@@ -4,6 +4,7 @@
   --background: #ffffff;
   --surface: rgba(255, 255, 255, 0.8);
   --foreground: #171717;
+  --paper: url("/textures/light-paper.jpg");
 }
 
 @theme inline {
@@ -17,8 +18,17 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* optional ambient cover layer */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
   background-image: url("/textures/cover.jpg");
   background-size: 1000px;
+  pointer-events: none;
+  z-index: -1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,27 +36,12 @@ body {
     --background: #0a0a0a;
     --surface: rgba(0, 0, 0, 0.6);
     --foreground: #ededed;
+    --paper: url("/textures/dark-paper.jpg");
   }
 
-  body {
+  body::before {
     background-image:
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url("/textures/cover.jpg");
-  }
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@media (max-height: 500px) and (orientation: landscape) {
-  .cover-fix {
-    justify-content: space-between !important;
-    padding: 0.5rem !important;
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url("/textures/cover.jpg");
   }
 }

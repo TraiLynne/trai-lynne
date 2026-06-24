@@ -11,19 +11,22 @@ export default function ConstructionArea() {
 }
 
 const containerStyle: CSSProperties = {
-  width: "100vw",
+  width: "100%",
   display: "flex",
   justifyContent: "center",
 };
 
 const wrapperStyle: CSSProperties = {
   position: "relative",
-  width: "100vw",
+  width: "100%",
+
   backgroundImage:
     "repeating-linear-gradient(-30deg, #facc15 0px, #facc15 20px, #000 20px, #000 40px)",
+
   padding: "1rem",
   overflow: "hidden",
-  flexShrink: 1
+
+  boxShadow: "0 2px 8px rgba(0,0,0,0.35)",
 };
 
 const textStyle: CSSProperties = {
@@ -31,8 +34,8 @@ const textStyle: CSSProperties = {
   color: "#fff",
   padding: "0.5rem 1rem",
   fontWeight: "bold",
-  letterSpacing: "0.1rem",
+  letterSpacing: "0.08rem",
   textTransform: "uppercase",
-  fontSize: "0.75rem",
+  fontSize: "0.8rem",
   textAlign: "center",
 };

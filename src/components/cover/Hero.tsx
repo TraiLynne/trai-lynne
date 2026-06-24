@@ -17,12 +17,10 @@ const containerStyle: CSSProperties = {
   justifyContent: "center",
   alignItems: "center",
   width: "100%",
-  flex: "0 1 auto",
 };
 
 const logoWrapperStyle: CSSProperties = {
     position: "relative",
     width: "min(98vw, 40vh)",
     aspectRatio: "1 / 1",
-    flexShrink: 1
 };
