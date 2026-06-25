@@ -11,14 +11,6 @@ export default function Header() {
       <Link href={"/"} className={styles.link}>
         <Image src={Logo} alt={"Trai Lynne Logo"} className={styles.img} />
       </Link>
-
-      <div>
-        <DesktopNav />
-      </div>
-
-      <div>
-        <MobileNav />
-      </div>
     </header>
   )
 }

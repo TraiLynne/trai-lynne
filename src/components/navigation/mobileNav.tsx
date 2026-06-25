@@ -13,7 +13,7 @@ export default function MobileNav() {
       </button>
       <div className={`${styles.wrapper} ${isOpen ? styles.activeWrapper : styles.inactiveWrapper}`}>
         {
-          isOpen && (navItems.map(data => <NavItem key={data.href} {...data} />))
+          isOpen && (navItems.map(data => <NavItem key={data.href} {...data} variant={"mobile"} />))
         }
       </div>
     </div>

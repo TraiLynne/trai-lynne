@@ -2,10 +2,14 @@
 
 import Link from "next/link";
 import useActiveRoute from "./useActiveRoute";
-import styles from "./nav.module.css"
+import mobileStyles from "./mobileNav.module.css"
+import desktopStyles from "./desktopNav.module.css"
 
-export default function NavItem({ href, label }: { href: string, label: string }) {
+type NavVariant = "desktop" | "mobile";
+
+export default function NavItem({ href, label, variant }: { href: string, label: string, variant: NavVariant }) {
   const { isActive } = useActiveRoute();
+  const styles = variant === "mobile" ? mobileStyles : desktopStyles;
 
   const active = isActive(href);
 

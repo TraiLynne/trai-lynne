@@ -18,3 +18,15 @@
 .inactiveWrapper {
   visibility: hidden;
 }
+
+.item {
+  background-color: yellow;
+}
+
+.activeItem {
+  color: orange;
+}
+
+.inactiveItem {
+  color: blue;
+}
