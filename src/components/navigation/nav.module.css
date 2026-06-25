@@ -1,0 +1,11 @@
+.item {
+  background-color: yellow;
+}
+
+.active{
+  color: red;
+}
+
+.inactive {
+  color: green;
+}
