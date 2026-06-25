@@ -2,10 +2,10 @@
   background-color: yellow;
 }
 
-.active{
+.activeItem{
   color: red;
 }
 
-.inactive {
+.inactiveItem {
   color: green;
 }

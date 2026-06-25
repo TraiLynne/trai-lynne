@@ -1,0 +1,20 @@
+.container{
+  display: flex;
+}
+
+.button {
+  color: red;
+  font-size: 2rem;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.activeWrapper {
+  width: 100%;
+}
+
+.inactiveWrapper {
+  visibility: hidden;
+}
