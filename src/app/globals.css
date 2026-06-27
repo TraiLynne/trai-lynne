@@ -9,6 +9,7 @@ html, body {
   --surface: rgba(255, 255, 255, 0.8);
   --foreground: #171717;
   --paper: url("/textures/light-paper.jpg");
+  --stickyNote: #FFEBA1;
 }
 
 @theme inline {
@@ -41,6 +42,7 @@ body::before {
     --surface: rgba(0, 0, 0, 0.6);
     --foreground: #ededed;
     --paper: url("/textures/dark-paper.jpg");
+    --stickyNote: #FFD100;
   }
 
   body::before {

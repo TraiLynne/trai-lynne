@@ -14,7 +14,7 @@ export default function NotebookLayout({
         <main className={styles.main}>
             <Header />
             <DesktopNav />
-            <MobileNav />
+            {/* <MobileNav /> */}
 
             <div className={styles.page}>
                 <ConstructionArea />
