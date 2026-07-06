@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
+import styles from "./mobileNav.module.css";
 import { navItems } from "./nav.config";
 import NavItem from "./navItem";
-import styles from "./mobileNav.module.css"
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(true);
@@ -11,11 +11,19 @@ export default function MobileNav() {
       <button className={styles.button} onClick={() => setIsOpen(!isOpen)}>
         ☰
       </button>
-      <div className={`${styles.wrapper} ${isOpen ? styles.activeWrapper : styles.inactiveWrapper}`}>
-        {
-          isOpen && (navItems.map(data => <NavItem key={data.href} {...data} variant={"mobile"} />))
-        }
+      <div
+        className={`${styles.wrapper} ${isOpen ? styles.activeWrapper : styles.inactiveWrapper}`}
+      >
+        {isOpen &&
+          navItems.map((data) => (
+            <NavItem
+              key={data.href}
+              {...data}
+              variant={"mobile"}
+              onClick={() => setIsOpen(false)}
+            />
+          ))}
       </div>
     </div>
-  )
+  );
 }

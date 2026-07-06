@@ -8,15 +8,19 @@ import useActiveRoute from "./useActiveRoute";
 
 type NavVariant = "desktop" | "mobile";
 
+type NavItemProps = {
+  href: string;
+  label: string;
+  variant: NavVariant;
+  onClick?: () => void;
+};
+
 export default function NavItem({
   href,
   label,
   variant,
-}: {
-  href: string;
-  label: string;
-  variant: NavVariant;
-}) {
+  onClick,
+}: NavItemProps) {
   const { isActive } = useActiveRoute();
   const styles = variant === "mobile" ? mobileStyles : desktopStyles;
 
@@ -26,9 +30,14 @@ export default function NavItem({
     <Link
       href={href}
       className={`${styles.item} ${active ? styles.activeItem : styles.inactiveItem}`}
+      onClick={onClick}
     >
       <Image
-        className={active ? styles.annotation : styles.hideAnnotation}
+        className={
+          active && variant === "desktop"
+            ? styles.annotation
+            : styles.hideAnnotation
+        }
         src="/images/annotations/red-oval.png"
         alt=""
         width={200}

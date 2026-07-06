@@ -1,9 +1,7 @@
-import Link from "next/link";
+import Logo from "@/public/images/logo.png";
 import Image from "next/image";
-import Logo from "@/public/images/logo.png"
-import styles from "./header.module.css"
-import DesktopNav from "../navigation/desktopNav";
-import MobileNav from "../navigation/mobileNav";
+import Link from "next/link";
+import styles from "./header.module.css";
 
 export default function Header() {
   return (
@@ -12,5 +10,5 @@ export default function Header() {
         <Image src={Logo} alt={"Trai Lynne Logo"} className={styles.img} />
       </Link>
     </header>
-  )
+  );
 }

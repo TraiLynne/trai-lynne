@@ -1,32 +1,80 @@
-.container{
-  display: flex;
+.container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 100;
+
+  transform: translateX(-50%);
 }
 
 .button {
-  color: red;
-  font-size: 2rem;
+  width: 48px;
+  height: 3rem;
+
+  display: block;
+  margin-left: 0 auto;
+
+  background: #b91c1c;
+  color: var(--foreground);
+  border: none;
+  border-radius: 0 0 0.4rem 0.4rem;
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  /* transform: translateX(-20%); */
 }
 
 .wrapper {
-  width: 100%;
-}
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  z-index: 101;
 
-.activeWrapper {
-  width: 100%;
+  width: 80vw;
+  max-width: 420px;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  background: #b91c1c;
+  border: 1px solid var(--foreground);
+  border-radius: 0.5rem;
+
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+
+  transform: translateX(-50%);
 }
 
 .inactiveWrapper {
-  visibility: hidden;
+  display: none;
 }
 
 .item {
-  background-color: yellow;
+  padding: 0.5rem;
+
+  color: var(--foreground);
+  text-align: center;
+  text-decoration: none;
+
+  border-bottom: 1px solid var(--foreground);
 }
 
 .activeItem {
-  color: orange;
+  font-weight: bold;
 }
 
 .inactiveItem {
-  color: blue;
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: none;
+  }
+}
+
+.annotation,
+.hideAnnotation {
+  display: none;
 }
