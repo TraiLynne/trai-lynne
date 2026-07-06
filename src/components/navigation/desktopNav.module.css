@@ -1,68 +1,76 @@
 .container {
-  width: 100%;
   display: flex;
   justify-content: space-around;
+  width: 100%;
 }
 
 .item {
-  background: var(--stickyNote);
-  color: #000;
-
   width: 15%;
   padding: 0.6rem;
-
+  border: 1px solid var(--stickyBorder);
+  background: var(--stickyNote);
+  box-shadow: var(--stickyShadow);
+  color: #000;
+  font-weight: bold;
   text-align: center;
-
-  /* IMPORTANT: single transform pipeline */
+  text-decoration: none;
   transform: rotate(-3deg) translateY(6px);
-
-  /* sticky paper shadow (KEY FIX) */
-  box-shadow:
-    2px 3px 0 rgba(0, 0, 0, 0.25),
-    6px 8px 18px rgba(0, 0, 0, 0.15);
-
-  border: 1px solid rgba(0, 0, 0, 0.25);
-
-  transition: transform 180ms ease, box-shadow 180ms ease;
+  transition:
+    box-shadow 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
 }
 
 .item:hover {
+  box-shadow: var(--stickyHoverShadow);
+  font-weight: bold;
   transform: rotate(0deg) translateY(-2px);
-
-  box-shadow:
-    4px 6px 0 rgba(0, 0, 0, 0.25),
-    10px 14px 22px rgba(0, 0, 0, 0.2);
-
-  font-weight: bold;
 }
+
 .activeItem {
-  transform: scale(1.15) rotate(-2deg) translateY(0px);
-
-  box-shadow:
-    6px 10px 0 rgba(0, 0, 0, 0.25),
-    14px 18px 28px rgba(0, 0, 0, 0.25);
-
-  z-index: 30;
+  box-shadow: var(--stickyActiveShadow);
   font-weight: bold;
+  transform: scale(1.15) rotate(-2deg) translateY(0);
+  z-index: 30;
 }
 
 .activeItem:hover {
-  font-weight: bold;
-  transform: scale(1.2) rotate(0);
+  transform: scale(1.2) rotate(0deg) translateY(0);
 }
 
 .inactiveItem {
+  box-shadow: var(--stickyInactiveShadow);
   opacity: 0.9;
   transform: rotate(-4deg) translateY(10px);
-
-  box-shadow:
-    1px 2px 0 rgba(0, 0, 0, 0.2),
-    4px 6px 10px rgba(0, 0, 0, 0.12);
-
   z-index: 0;
 }
 
-.inactiveItem:hover {
-  opacity: 1;
-  transform: rotate(-1deg) translateY(0px);
+.item span {
+  position: relative;
+
+  z-index: 2;
+}
+
+.annotation {
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  z-index: 1;
+
+  width: 80%;
+
+  height: 120%;
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+
+  object-fit: fill;
+}
+
+.hideAnnotation {
+  display: none;
 }

@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
-html, body {
+html,
+body {
   height: 100dvh;
 }
 
@@ -9,7 +10,20 @@ html, body {
   --surface: rgba(255, 255, 255, 0.8);
   --foreground: #171717;
   --paper: url("/textures/light-paper.jpg");
-  --stickyNote: #FFEBA1;
+  --stickyNote: #ffeba1;
+  --stickyBorder: rgba(0, 0, 0, 0.2);
+
+  --stickyShadow:
+    2px 3px 0 rgba(0, 0, 0, 0.25), 6px 8px 18px rgba(0, 0, 0, 0.15);
+
+  --stickyHoverShadow:
+    4px 6px 0 rgba(0, 0, 0, 0.25), 10px 14px 22px rgba(0, 0, 0, 0.2);
+
+  --stickyActiveShadow:
+    6px 10px 0 rgba(0, 0, 0, 0.25), 14px 18px 28px rgba(0, 0, 0, 0.25);
+
+  --stickyInactiveShadow:
+    1px 2px 0 rgba(0, 0, 0, 0.2), 4px 6px 10px rgba(0, 0, 0, 0.12);
 }
 
 @theme inline {
@@ -42,12 +56,27 @@ body::before {
     --surface: rgba(0, 0, 0, 0.6);
     --foreground: #ededed;
     --paper: url("/textures/dark-paper.jpg");
-    --stickyNote: #FFD100;
+    --stickyNote: #fde047;
+
+    --stickyBorder: rgba(255, 255, 255, 0.18);
+
+    --stickyShadow:
+      inset 0 1px rgba(255, 255, 255, 0.25), 0 8px 18px rgba(0, 0, 0, 0.75);
+
+    --stickyHoverShadow:
+      inset 0 1px rgba(255, 255, 255, 0.35), 0 10px 22px rgba(0, 0, 0, 0.85);
+
+    --stickyActiveShadow:
+      inset 0 1px rgba(255, 255, 255, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.12),
+      0 12px 26px rgba(0, 0, 0, 0.9);
+
+    --stickyInactiveShadow:
+      inset 0 1px rgba(255, 255, 255, 0.18), 0 6px 14px rgba(0, 0, 0, 0.7);
   }
 
   body::before {
     background-image:
-      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url("/textures/cover.jpg");
   }
 }
