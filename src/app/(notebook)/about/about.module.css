@@ -1,0 +1,29 @@
+.header {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: bold;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
+.paragraph {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.highlight {
+  font-weight: bold;
+  background-color: var(--sticky-note);
+  opacity: 0.9;
+  color: black;
+}
+
+.underline {
+  text-decoration: underline;
+  font-weight: bold;
+  text-decoration-color: red;
+  text-decoration-thickness: 0.2rem;
+  text-underline-offset: 0.2rem;
+}
