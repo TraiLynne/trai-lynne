@@ -1,11 +1,11 @@
 "use client";
 import { useState } from "react";
+import { navItems } from "../nav.config";
+import NavItem from "../navItem";
 import styles from "./mobileNav.module.css";
-import { navItems } from "./nav.config";
-import NavItem from "./navItem";
 
 export default function MobileNav() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className={styles.container}>
       <button className={styles.button} onClick={() => setIsOpen(!isOpen)}>

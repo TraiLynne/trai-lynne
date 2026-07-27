@@ -1,6 +1,6 @@
+import { navItems } from "../nav.config";
+import NavItem from "../navItem";
 import styles from "./desktopNav.module.css";
-import { navItems } from "./nav.config";
-import NavItem from "./navItem";
 
 export default function DesktopNav() {
   return (

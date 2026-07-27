@@ -1,9 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import desktopStyles from "./desktopNav.module.css";
-import mobileStyles from "./mobileNav.module.css";
+import desktopStyles from "./desktop/desktopNav.module.css";
+import mobileStyles from "./mobile/mobileNav.module.css";
 import useActiveRoute from "./useActiveRoute";
 
 type NavVariant = "desktop" | "mobile";
@@ -32,17 +31,6 @@ export default function NavItem({
       className={`${styles.item} ${active ? styles.activeItem : styles.inactiveItem}`}
       onClick={onClick}
     >
-      <Image
-        className={
-          active && variant === "desktop"
-            ? styles.annotation
-            : styles.hideAnnotation
-        }
-        src="/images/annotations/red-oval.png"
-        alt=""
-        width={200}
-        height={50}
-      />
       <span>{label}</span>
     </Link>
   );

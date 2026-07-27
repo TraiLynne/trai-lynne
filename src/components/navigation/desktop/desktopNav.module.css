@@ -5,16 +5,26 @@
 }
 
 .item {
+  --item-scale: 1;
+  --item-rotation: -3deg;
+  --item-offset-y: 6px;
+
+  position: relative;
   width: 15%;
   padding: 0.6rem;
-  border: 1px solid var(--stickyBorder);
-  background: var(--stickyNote);
-  box-shadow: var(--stickyShadow);
+  isolation: isolate;
+
+  border: 1px solid var(--sticky-border);
+  background: var(--sticky-note);
+  box-shadow: var(--sticky-shadow);
+
   color: #000;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  transform: rotate(-3deg) translateY(6px);
+
+  transform: scale(var(--item-scale)) rotate(var(--item-rotation))
+    translateY(var(--item-offset-y));
   transition:
     box-shadow 180ms ease,
     opacity 180ms ease,
@@ -22,52 +32,50 @@
 }
 
 .item:hover {
-  box-shadow: var(--stickyHoverShadow);
-  font-weight: bold;
-  transform: rotate(0deg) translateY(-2px);
+  --item-rotation: 0deg;
+  --item-offset-y: -2px;
+
+  box-shadow: var(--sticky-hover-shadow);
 }
 
 .activeItem {
-  box-shadow: var(--stickyActiveShadow);
-  font-weight: bold;
-  transform: scale(1.15) rotate(-2deg) translateY(0);
+  --item-scale: 1.15;
+  --item-rotation: -2deg;
+  --item-offset-y: 0;
+
+  box-shadow: var(--sticky-active-shadow);
   z-index: 30;
 }
 
 .activeItem:hover {
-  transform: scale(1.2) rotate(0deg) translateY(0);
+  --item-scale: 1.2;
+  --item-rotation: 0deg;
+  --item-offset-y: 0;
 }
 
 .inactiveItem {
-  box-shadow: var(--stickyInactiveShadow);
+  --item-rotation: -4deg;
+  --item-offset-y: 10px;
+
+  box-shadow: var(--sticky-inactive-shadow);
   opacity: 0.9;
-  transform: rotate(-4deg) translateY(10px);
   z-index: 0;
 }
 
 .item span {
   position: relative;
-
   z-index: 2;
 }
 
 .annotation {
   position: absolute;
-
   top: 50%;
-
   left: 50%;
-
   z-index: 1;
-
   width: 80%;
-
   height: 120%;
-
   transform: translate(-50%, -50%);
-
   pointer-events: none;
-
   object-fit: fill;
 }
 
