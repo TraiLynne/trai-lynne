@@ -3,7 +3,6 @@ import Barcode from "../barcode/Barcode";
 import ConstructionArea from "../construction/ConstructionArea";
 import Header from "../header/header";
 import DesktopNav from "../navigation/desktop/desktopNav";
-import MobileNav from "../navigation/mobile/mobileNav";
 
 export default function NotebookLayout({
   children,
@@ -15,7 +14,7 @@ export default function NotebookLayout({
       <Header />
       <div className={styles.notebookSurface}>
         <DesktopNav />
-        <MobileNav />
+        {/* <MobileNav /> */}
         <div className={styles.page}>
           <ConstructionArea />
           {children}
