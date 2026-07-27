@@ -1,5 +1,6 @@
 "use client";
 
+import { writtenFont } from "@/src/app/fonts";
 import Link from "next/link";
 import desktopStyles from "./desktop/desktopNav.module.css";
 import mobileStyles from "./mobile/mobileNav.module.css";
@@ -28,7 +29,7 @@ export default function NavItem({
   return (
     <Link
       href={href}
-      className={`${styles.item} ${active ? styles.activeItem : styles.inactiveItem}`}
+      className={`${styles.item} ${active ? styles.activeItem : styles.inactiveItem} ${writtenFont.className}`}
       onClick={onClick}
     >
       <span>{label}</span>

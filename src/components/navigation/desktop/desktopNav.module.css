@@ -11,7 +11,7 @@
 
   position: relative;
   width: 15%;
-  padding: 0.6rem;
+  padding: 0.4rem;
   isolation: isolate;
 
   border: 1px solid var(--sticky-border);
@@ -22,6 +22,7 @@
   font-weight: bold;
   text-align: center;
   text-decoration: none;
+  font-size: clamp(1.25rem, 1.5vw, 1.25rem);
 
   transform: scale(var(--item-scale)) rotate(var(--item-rotation))
     translateY(var(--item-offset-y));
@@ -60,11 +61,6 @@
   box-shadow: var(--sticky-inactive-shadow);
   opacity: 0.9;
   z-index: 0;
-}
-
-.item span {
-  position: relative;
-  z-index: 2;
 }
 
 .annotation {

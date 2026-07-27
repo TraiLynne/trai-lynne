@@ -57,7 +57,7 @@ export default function About() {
         <span className={styles.underline}>
           Ruby was my first programming language
         </span>
-        , and I still speak it at home sometimes. These days, I’m much{" "}
+        , and I still use it at home sometimes. These days, I’m much{" "}
         <span className={styles.underline}>more fluent in JavaScript</span>.
         I’ve also begun{" "}
         <span className={styles.underline}>learning Python</span> through my
@@ -88,12 +88,15 @@ export default function About() {
         <span className={styles.highlight}>meaningful problems</span>.
       </p>
 
-      <p className={writtenFont.className} style={{ textAlign: "center" }}>
+      <p
+        className={`${writtenFont.className} ${styles.handWritten}`}
+        style={{ textAlign: "center" }}
+      >
         Thanks for stopping by my corner of the web!
       </p>
 
-      <p className={writtenFont.className} style={{ textAlign: "center" }}>
-        —Trai
+      <p className={styles.signOff}>
+        <span className={styles.signOffIcon} aria-hidden="true" />
       </p>
     </div>
   );

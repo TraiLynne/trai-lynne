@@ -1,8 +1,8 @@
 .header {
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-size: clamp(2rem, 4vw, 1.6rem);
   font-weight: bold;
   margin: 0;
-  padding: 1rem;
+  padding: 0.5rem;
   text-align: center;
 }
 .paragraph {
@@ -11,6 +11,12 @@
   margin: 0;
   padding: 0.75rem;
   text-align: left;
+}
+
+.handWritten {
+  text-align: center;
+  padding: 0.75rem;
+  font-size: clamp(1.75rem, 1.5vw, 1.2rem);
 }
 
 .highlight {
@@ -26,4 +32,26 @@
   text-decoration-color: red;
   text-decoration-thickness: 0.2rem;
   text-underline-offset: 0.2rem;
+}
+
+.signOff {
+  color: var(--foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+.signOffIcon {
+  display: inline-block;
+  width: 4em;
+  height: 1.5em;
+  margin-left: 0.35em;
+  vertical-align: middle;
+
+  background-color: var(--foreground);
+
+  mask: url("/images/annotations/signature.svg") center / contain no-repeat;
+  -webkit-mask: url("/images/annotations/signature.svg") center / contain
+    no-repeat;
 }
